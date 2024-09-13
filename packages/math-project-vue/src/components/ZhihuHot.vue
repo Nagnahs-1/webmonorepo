@@ -54,7 +54,6 @@ body {
   background-color: #f5f5f5;
 }
 
-/* 容器样式 */
 .list {
   max-width: 800px;
   margin: 20px auto;
@@ -64,7 +63,6 @@ body {
   gap: 20px;
 }
 
-/* 单个卡片样式 */
 .hot {
   background-color: #fbf3f3;
   border-radius: 8px;
@@ -75,7 +73,6 @@ body {
   padding: 16px;
 }
 
-/* 左侧内容区域 */
 .hot .content {
   flex: 1;
   display: flex;
@@ -83,7 +80,6 @@ body {
   /* justify-content: space-between; */
 }
 
-/* 序号样式 */
 .hot span {
   display: inline-block;
   padding: 8px 12px;
@@ -94,40 +90,37 @@ body {
   color: #555;
 }
 
-/* 标题样式 */
 .ellipsis_2 {
   font-size: 1.5em;
   margin-bottom: 8px;
   color: #222;
 }
 
-/* 摘要样式 */
 .ellipsis_1 {
   font-size: 1em;
   color: #666;
   overflow: hidden;
+  /* 当内容被裁剪时，是否显示省略标记 */
   text-overflow: ellipsis;
+  /* 元素显示为一个弹性盒子 */
   display: -webkit-box;
-  /*控制最大行数*/
+  /*最多显示两行文本，如果内容超过两行，则多余的内容会被裁剪，并显示省略号*/
   -webkit-line-clamp: 2;
-
+/* 定义弹性盒子中项目的排列方向。vertical 表示项目将垂直排列，即从上到下 */
   -webkit-box-orient: vertical;
 }
 
-/* 详细文字样式 */
 .hot div:last-child {
   font-size: 0.9em;
   color: #777;
   margin-bottom: 16px;
 }
 
-/* 图片样式 */
 .hot img {
   width: 150px;
   height: auto;
   margin-right: 20px;
   float: right;
-  /* 使图片左对齐并且文字环绕 */
   border-radius: 8px;
   flex-shrink: 0;
 
