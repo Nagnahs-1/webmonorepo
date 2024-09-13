@@ -1,13 +1,13 @@
 <script setup lang="ts">
-import dayjs from 'dayjs';
-import HelloWorld from './components/HelloWorld.vue'
-import { Person } from '@Nagnahs-1/tools'
-
-const p = new Person("朱雨帆", "math");
+// import dayjs from 'dayjs';
+// import HelloWorld from './components/HelloWorld.vue'
+// import { Person } from '@Nagnahs-1/tools'
+// const p = new Person("jumping", "math");
+import ZhihuHot from './components/ZhihuHot.vue';
 </script>
 
 <template>
-  <div>
+  <!-- <div>
     <div>当前时间{{ dayjs().format('YYYY年MM月DD日 HH:mm:ss') }}</div>
     <div>{{ p.name }} : {{ p.slogan }}</div>
     <a href="https://vitejs.dev" target="_blank">
@@ -16,8 +16,9 @@ const p = new Person("朱雨帆", "math");
     <a href="https://vuejs.org/" target="_blank">
       <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
     </a>
-  </div>
-  <HelloWorld msg="Vite + Vue" />
+  </div> -->
+  <!-- <HelloWorld msg="Vite + Vue" /> -->
+  <ZhihuHot> </ZhihuHot>
 </template>
 
 <style scoped>
