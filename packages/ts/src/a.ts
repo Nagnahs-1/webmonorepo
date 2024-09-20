@@ -1,15 +1,16 @@
 // // src/a.js
 
 class Person {
-  name: string;
+  name: string
   constructor(name: string) {
-    this.name = name;
+    this.name = name
   }
+
   say = (who: string) => {
     // God：上帝 / god：神
-    const firstChar = who.charAt(0).toLocaleUpperCase();
-    console.log(`${firstChar}${who.slice(1)} bless you`);
-  };
+    const firstChar = who.charAt(0).toLocaleUpperCase()
+    console.log(`${firstChar}${who.slice(1)} bless you`)
+  }
 }
 
 // let DPZ = new Person("DPZ");
@@ -32,7 +33,7 @@ class Person {
 
 // 定义 TS 类型
 type God = 'God' | 'god' | '主' | 'Trisolaran'
-let DPZ = new Person("DPZ");
-let 主: God = 'God'; // 6 | 'god' | 'Trisolaran' (三体人)
-DPZ.say(主);
+const DPZ = new Person('DPZ')
+const 主: God = 'God' // 6 | 'god' | 'Trisolaran' (三体人)
+DPZ.say(主)
 

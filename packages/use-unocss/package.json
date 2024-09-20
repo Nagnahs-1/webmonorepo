@@ -1,5 +1,5 @@
 {
-  "name": "math-project-vue",
+  "name": "use-unocss",
   "type": "module",
   "version": "0.0.0",
   "private": true,
@@ -9,17 +9,15 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@Nagnahs-1/tools": "workspace:^",
     "vite": "^5.4.6",
-    "vue": "^3.5.3"
+    "vue": "^3.4.37"
   },
   "devDependencies": {
-    "@iconify-json/carbon": "^1.2.1",
-    "@unocss/preset-icons": "^0.62.4",
-    "@vitejs/plugin-vue": "^5.1.4",
-    "typescript": "^5.5.4",
+    "@types/vue": "^2.0.0",
+    "@vitejs/plugin-vue": "^5.1.2",
+    "typescript": "^5.5.3",
     "unocss": "^0.62.4",
-    "vite": "^5.4.3",
+    "vite": "^5.4.1",
     "vue-tsc": "^2.0.29"
   }
 }

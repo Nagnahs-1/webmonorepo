@@ -1,28 +1,28 @@
 <script lang="ts" setup>
-import { onMounted, ref } from 'vue';
-import { ZhiHuHot, ZhiHuHotList } from '@/types/zhihu'
+import type { ZhiHuHot, ZhiHuHotList } from '@/types/zhihu'
+import { onMounted, ref } from 'vue'
 
 
-const list = ref<ZhiHuHot[]>([]);
+const list = ref<ZhiHuHot[]>([])
 // const url = "/api/v3/feed/topstory/hot-lists/total";
 // let response = await fetch(url, { mode: "no-cors" });
 const getData = async () => {
   // const url =
   //   "https://www.zhihu.com/api/v3/feed/topstory/hot-lists/total?limit=1&desktop=true";
   // let response = await fetch(url, { mode: "no-cors" });
-  const url = "/api/v3/feed/topstory/hot-lists/total";
-  let response = await fetch(url, { mode: "no-cors" });
-  const res: ZhiHuHotList = await response.json();
-  list.value = res.data;
-};
+  const url = '/api/v3/feed/topstory/hot-lists/total'
+  const response = await fetch(url, { mode: 'no-cors' })
+  const res: ZhiHuHotList = await response.json()
+  list.value = res.data
+}
 
 onMounted(() => {
-  getData();
-});
+  getData()
+})
 
 const toggleHot = (id: number) => {
-  window.open(`https://www.zhihu.com/question/${id}`);
-};
+  window.open(`https://www.zhihu.com/question/${id}`)
+}
 const a = ('abcd')
 const arr = ref([1, 2, 3, 4])
 </script>
@@ -32,11 +32,27 @@ const arr = ref([1, 2, 3, 4])
     <section v-for="(item, index) in list" :key="item.id" class="hot" @click="toggleHot(item.target.id)">
       <span>{{ index + 1 }}</span>
       <div>
-        <h1 class="ellipsis_2">{{ item.target.title }}</h1>
-        <p class="ellipsis_1">{{ item.target.excerpt }}</p>
+        <h1 class="ellipsis_2">
+          {{ item.target.title }}
+        </h1>
+        <p class="ellipsis_1">
+          {{ item.target.excerpt }}
+        </p>
         <div>{{ item.detail_text }}</div>
       </div>
       <img :src="item.children[0].thumbnail" alt="">
+    </section>
+    <section>
+      class="bg-yellow rounded-md w-800px grid grid-cols-3 items-center gap-2"
+      >
+      <div class="h-10 place-content-center bg-pink">
+        1
+      </div>
+      <div bg-sky>
+        2
+      </div>
+      <div>3</div>
+      <div>4</div>
     </section>
   </div>
 </template>

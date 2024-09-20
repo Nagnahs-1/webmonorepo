@@ -5,5 +5,5 @@
  * @returns {number} 两个数字的和，或连接的字符串
  */
 export function sum(a: number, b: number) {
-    return a + b;
+  return a + b
 }
