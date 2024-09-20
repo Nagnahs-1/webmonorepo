@@ -1,7 +1,11 @@
 {
   "name": "WEB-MONOREPO",
+  "type": "module",
   "version": "1.0.0",
   "description": "",
+  "author": "",
+  "license": "ISC",
+  "keywords": [],
   "main": "index.js",
   "engines": {
     "node": ">=18.12",
@@ -9,14 +13,25 @@
   },
   "scripts": {
     "preinstall": "npx only-allow pnpm",
-    "math:dev": "pnpm -F math-project-vue dev"
+    "math:dev": "pnpm -F math-project-vue dev",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "dayjs": "^1.11.13",
-    "typescript": "^5.5.4"
+    "typescript": "^5.5.4",
+    "vite": "^5.4.6"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^3.6.2",
+    "@eslint-react/eslint-plugin": "^1.14.1",
+    "@types/vue": "^2.0.0",
+    "@unocss/eslint-plugin": "^0.62.3",
+    "eslint": "^9.10.0",
+    "eslint-plugin-format": "^0.1.2",
+    "lint-staged": "^15.2.10",
+    "simple-git-hooks": "^2.11.1",
+    "unocss": "^0.62.4"
   },
   "pnpm": {
     "peerDependencyRules": {
@@ -24,5 +39,11 @@
         "eslint": ">=9.0.0 <=9.9.0"
       }
     }
+  },
+  "simple-git-hooks": {
+    "pre-commit": "npx lint-staged"
+  },
+  "lint-staged": {
+    "*": "eslint --fix"
   }
 }

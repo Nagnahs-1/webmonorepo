@@ -22,7 +22,7 @@
     "**/CVS": true,
     "**/.DS_Store": true,
     "**/*.js": {
-      "when": "$(basename).ts" //ts编译后生成的js文件将不会显示在工作区中
+      "when": "$(basename).ts" // ts编译后生成的js文件将不会显示在工作区中
     },
     "**/node_modules": false
   },
@@ -33,7 +33,7 @@
   "editor.tabSize": 2,
   // #值设置为true时，每次保存的时候自动格式化；
   "editor.formatOnSave": true,
-  //对应长度处显示一条线
+  // 对应长度处显示一条线
   "editor.rulers": [100],
   "editor.bracketPairColorization.enabled": true,
   "editor.guides.bracketPairs": "active",
