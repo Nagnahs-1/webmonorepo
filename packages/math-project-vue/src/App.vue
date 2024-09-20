@@ -15,9 +15,9 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="p-2 dark:bg-red">
+  <div class="bg-#a992d5 p-2 dark:bg-red md:bg-amber-4 sm:bg-blue-3">
     <div
-      class="m-auto size-100 bg-pink hover:(bg-cyan text-4xl) md:bg-amber-4 sm:bg-blue-3"
+      class="-4 m-auto size-100 bg-pink hover:(bg-cyan text-4xl) md:bg-pink sm:bg-blue-3"
       flex
       content-center
       items-center
@@ -50,16 +50,26 @@ onMounted(() => {
     </a>
     <!-- <HelloWorld msg="Vite + Vue" /> -->
     <section
-      class="grid grid-cols-3 w-800px items-center gap-2 rounded-md bg-yellow"
+      class="grid grid-cols-3 m-auto mb-4 mt-4 w-800px items-center gap-2 rounded-md bg-pink-2"
     >
-      <div class="h-10 place-content-center bg-pink">
+      <div class="h-10 place-content-center bg-pink-3">
         1
       </div>
-      <div bg-sky>
+      <div class="h-10 place-content-center bg-pink-4">
         2
       </div>
-      <div>3</div>
-      <div>4</div>
+      <div class="h-10 place-content-center bg-pink-3">
+        3
+      </div>
+      <div class="h-10 place-content-center bg-pink-4">
+        4
+      </div>
+      <div class="h-10 place-content-center bg-pink-3">
+        5
+      </div>
+      <div class="h-10 place-content-center bg-pink-4">
+        6
+      </div>
     </section>
     <ZhihuHot />
   </div>

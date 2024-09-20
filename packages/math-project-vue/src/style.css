@@ -83,8 +83,10 @@ button:focus-visible {
   }
 
   /* 深色模式样式 */
-  .dark {
-    background-color: black;
-    color: white;
-  }
+
+}
+
+.dark {
+  background-color: black;
+  color: black;
 }

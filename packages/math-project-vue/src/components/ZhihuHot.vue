@@ -4,12 +4,7 @@ import { onMounted, ref } from 'vue'
 
 
 const list = ref<ZhiHuHot[]>([])
-// const url = "/api/v3/feed/topstory/hot-lists/total";
-// let response = await fetch(url, { mode: "no-cors" });
 const getData = async () => {
-  // const url =
-  //   "https://www.zhihu.com/api/v3/feed/topstory/hot-lists/total?limit=1&desktop=true";
-  // let response = await fetch(url, { mode: "no-cors" });
   const url = '/api/v3/feed/topstory/hot-lists/total'
   const response = await fetch(url, { mode: 'no-cors' })
   const res: ZhiHuHotList = await response.json()
@@ -28,7 +23,7 @@ const arr = ref([1, 2, 3, 4])
 </script>
 
 <template>
-  <div class="list">
+  <!-- <div class="list">
     <section v-for="(item, index) in list" :key="item.id" class="hot" @click="toggleHot(item.target.id)">
       <span>{{ index + 1 }}</span>
       <div>
@@ -42,22 +37,27 @@ const arr = ref([1, 2, 3, 4])
       </div>
       <img :src="item.children[0].thumbnail" alt="">
     </section>
-    <section>
-      class="bg-yellow rounded-md w-800px grid grid-cols-3 items-center gap-2"
-      >
-      <div class="h-10 place-content-center bg-pink">
-        1
+  </div> -->
+  <div class="bg-#a992d5 md:bg-amber-4 sm:bg-blue-3">
+    <section v-for="(item, index) in list" :key="item.id" class="flex cursor-pointer items-center rounded-lg bg-gray-100 p-4 shadow-md" @click="toggleHot(item.target.id)">
+      <span class="mr-4 text-lg font-semibold">{{ index + 1 }}</span>
+      <div class="flex-1">
+        <h1 class="truncate text-lg font-medium leading-tight">
+          {{ item.target.title }}
+        </h1>
+        <p class="line-clamp-2 text-sm text-gray-600 leading-tight">
+          {{ item.target.excerpt }}
+        </p>
+        <div class="mt-2 text-sm text-gray-500">
+          {{ item.detail_text }}
+        </div>
       </div>
-      <div bg-sky>
-        2
-      </div>
-      <div>3</div>
-      <div>4</div>
+      <img :src="item.children[0].thumbnail" class="ml-4 h-auto w-32 rounded-lg" alt="">
     </section>
   </div>
 </template>
 
-<style scoped>
+<!-- <style scoped>
 * {
   margin: 0;
   padding: 0;
@@ -141,4 +141,4 @@ body {
   flex-shrink: 0;
 
 }
-</style>
+</style> -->
