@@ -2,8 +2,9 @@
 import { Person } from '@Nagnahs-1/tools'
 import dayjs from 'dayjs'
 import { onMounted } from 'vue'
-import ZhihuHot from './components/ZhihuHot.vue'
+import { RouterLink } from 'vue-router'
 import { useDark } from './composables/useDark'
+
 
 const p = new Person('jumping', 'math')
 
@@ -13,6 +14,7 @@ onMounted(() => {
   applySavedTheme()
 })
 </script>
+
 
 <template>
   <div class="bg-#a992d5 p-2 dark:bg-red md:bg-amber-4 sm:bg-blue-3">
@@ -40,7 +42,37 @@ onMounted(() => {
         </button>
       </div>
     </div>
-    <div>当前时间{{ dayjs().format('YYYY年MM月DD日 HH:mm:ss') }}</div>
+    <!-- <MockView /> -->
+    <main
+      class="m-2 h-100vh overflow-y-scroll rounded-xl bg-pink-200 dark:bg-purple-300"
+    >
+      <p>
+        <strong>Current route path：</strong> {{ $route.fullPath }}
+      </p>
+      <header flex justify-center gap-4 text-xl>
+        <RouterLink to="/zhihu">
+          知乎热榜
+        </RouterLink>
+
+        <RouterLink to="/mock">
+          以赝丁真
+        </RouterLink>
+        <RouterLink to="/api">
+          Apifox
+        </RouterLink>
+        <RouterLink to="/I18n">
+          I18n
+        </RouterLink>
+        <RouterLink to="/Test">
+          Test
+        </RouterLink>
+      </header>
+      <router-view />
+    </main>
+
+    <div>
+      当前时间{{ dayjs().format('YYYY年MM月DD日 HH:mm:ss') }}
+    </div>
     <div>{{ p.name }} : {{ p.slogan }}</div>
     <a href="https://vitejs.dev" target="_blank">
       <img src="/vite.svg" class="logo" alt="Vite logo">
@@ -71,7 +103,7 @@ onMounted(() => {
         6
       </div>
     </section>
-    <ZhihuHot />
+    <!-- <ZhihuHot /> -->
   </div>
 </template>
 

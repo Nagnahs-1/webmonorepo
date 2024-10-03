@@ -1,12 +1,11 @@
 {
-  "name": "@Nagnahs-1/tools",
+  "name": "tools",
   "version": "1.0.0",
-  "description": "公共工具库",
+  "description": "",
   "author": "",
   "license": "ISC",
   "keywords": [],
   "main": "index.js",
-  "module": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   }
