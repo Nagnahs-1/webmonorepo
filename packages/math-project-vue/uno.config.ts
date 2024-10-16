@@ -1,3 +1,4 @@
+import type { Theme } from 'unocss/preset-uno'
 import {
   defineConfig,
   presetAttributify,
@@ -7,10 +8,15 @@ import {
   transformerDirectives,
   transformerVariantGroup,
 } from 'unocss'
+import presetTheme from 'unocss-preset-theme'
+import { myTheme } from './uno.theme'
 
 export default defineConfig({
   // ...UnoCSS options
   presets: [
+    presetTheme<Theme>({
+      theme: myTheme,
+    }),
     presetAttributify({
       /* preset options */
       presets: [presetAttributify(), presetUno()],

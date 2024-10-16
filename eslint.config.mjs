@@ -51,5 +51,9 @@ export default antfu({
       'jsdoc/sort-tags': ['warn'],
       'ts/ban-ts-comment': 'off', // 禁止使用 @ts-ignore
       // "ts/no-unused-expressions": "off",
+      'test/consistent-test-it': ['error', { withinDescribe: 'test' }],
+
     },
+
   })
+

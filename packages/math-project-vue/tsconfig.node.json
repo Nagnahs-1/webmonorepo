@@ -4,11 +4,10 @@
     "lib": ["ES2023"],
     "moduleDetection": "force",
     "module": "ESNext",
-
     /* Bundler mode */
     "moduleResolution": "bundler",
+    "types": ["vitest/globals"],
     "allowImportingTsExtensions": true,
-
     /* Linting */
     "strict": true,
     "noFallthroughCasesInSwitch": true,

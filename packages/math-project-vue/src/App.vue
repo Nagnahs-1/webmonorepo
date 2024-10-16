@@ -47,7 +47,7 @@ onMounted(() => {
       class="m-2 h-100vh overflow-y-scroll rounded-xl bg-pink-200 dark:bg-purple-300"
     >
       <p>
-        <strong>Current route path：</strong> {{ $route.fullPath }}
+        <!-- <strong>Current route path：</strong> {{ $route.fullPath }} -->
       </p>
       <header flex justify-center gap-4 text-xl>
         <RouterLink to="/zhihu">
@@ -65,6 +65,9 @@ onMounted(() => {
         </RouterLink>
         <RouterLink to="/Test">
           Test
+        </RouterLink>
+        <RouterLink to="/Unocss">
+          Unocsstest
         </RouterLink>
       </header>
       <router-view />
