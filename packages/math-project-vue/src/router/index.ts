@@ -17,9 +17,11 @@ const routes = [
   { name: 'Unocsstest', path: '/Unocss', component: Unocsstest },
   // { name: 'theme', path: '/theme', component: ColorTheme },
 ]
-
+// @ts-ignore
 const router = createRouter({
   history: createWebHistory(),
   routes,
 })
+
+
 export default router

@@ -3,6 +3,7 @@ import { Person } from '@Nagnahs-1/tools'
 import dayjs from 'dayjs'
 import { onMounted } from 'vue'
 import { RouterLink } from 'vue-router'
+import { showMsg } from './components/MessageBox'
 import { useDark } from './composables/useDark'
 
 
@@ -13,6 +14,17 @@ const { enableDarkMode, disableDarkMode, applySavedTheme } = useDark()
 onMounted(() => {
   applySavedTheme()
 })
+
+function openAlcart() {
+  showMsg({
+    title: '标题',
+    content: '1234567',
+    closeable: true,
+    showCancel: true,
+    onCancel: () => console.log('Cancle:>>'),
+    onConfirm: () => console.log('Confirm:>>'),
+  })
+}
 </script>
 
 
@@ -39,6 +51,9 @@ onMounted(() => {
         </button>
         <button @click="enableDarkMode">
           Dark
+        </button>
+        <button @click="openAlcart">
+          openAlcart
         </button>
       </div>
     </div>
